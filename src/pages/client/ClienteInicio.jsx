@@ -35,7 +35,7 @@ const ClienteInicio = () => {
     clienteService.listarAnimales()
       .then((data) => {
         const animalesActivos = data.filter(a => (a.estado || '').toLowerCase() === 'activo');
-        const animalesMapeados = data.map(a => ({
+        const animalesMapeados = animalesActivos.map(a => ({
           id: a.id,
           idString: `LOTE-${a.id}`,
           titulo: `${a.especie || 'Lote de Ganado'} - Raza: ${a.raza || 'General'}`,
