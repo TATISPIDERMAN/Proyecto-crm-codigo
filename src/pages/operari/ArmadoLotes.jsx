@@ -32,7 +32,7 @@ const ArmadoLotes = () => {
           setLoteIdSeleccionado(listaLotes[0].id.toString());
         }
 
-        const resAnimales = await fetch('http://proyecto-crm-codigo-production.up.railway.app/api/animales');
+        const resAnimales = await fetch('https://proyecto-crm-codigo-production.up.railway.app/api/animales');
         if (resAnimales.ok) {
           const animalesData = await resAnimales.json();
           setListaAnimales(animalesData);
@@ -54,7 +54,7 @@ const ArmadoLotes = () => {
       return;
     }
     try {
-      const res = await fetch(`http://proyecto-crm-codigo-production.up.railway.app/api/animales/rfid/${rfid.trim()}`);
+      const res = await fetch(`https://proyecto-crm-codigo-production.up.railway.app/api/animales/rfid/${rfid.trim()}`);
       if (res.ok) {
         const animal = await res.json();
         setPesoBalanza(animal.peso || 0);

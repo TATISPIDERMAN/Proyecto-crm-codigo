@@ -32,7 +32,7 @@ const CargaCamiones = () => {
         if (viajes.length > 0) setViajeIdSeleccionado(viajes[0].id.toString());
 
         // 2. Traemos los animales para el autocompletado
-        const resAnimales = await fetch('http://proyecto-crm-codigo-production.up.railway.app/api/animales');
+        const resAnimales = await fetch('https://proyecto-crm-codigo-production.up.railway.app/api/animales');
         if (resAnimales.ok) {
           const animalesData = await resAnimales.json();
           setListaAnimales(animalesData);
