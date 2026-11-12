@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://proyecto-crm-codigo-production.up.railway.app:8080/api';
+const API_URL = 'https://proyecto-crm-codigo-production.up.railway.app/api';
 
 export const supervisorService = {
   obtenerActividades: async (usuarioConsultaId) => {
