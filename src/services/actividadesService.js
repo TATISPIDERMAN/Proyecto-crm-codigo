@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://proyecto-crm-codigo-production.up.railway.app/api/actividades';
+const API_URL = 'https://proyecto-crm-codigo-production.up.railway.app/api/actividades';
 
 // Trae todos los logs generales (Solo para Admin o Supervisor)
 export const obtenerAuditoriaGeneral = async (usuarioConsultaId) => {
